@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-playfair: var(--font-playfair);
+  --font-public: var(--font-public);
+
+  --color-brand-primary: #000000;
+  --color-brand-secondary: #4A4A4A;
+  --color-brand-accent: #8C7B6C;
+}
+
+@layer base {
+  body {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: var(--font-public), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .architectural-grid {
+    @apply grid grid-cols-12 w-full max-w-[1440px] mx-auto px-6 md:px-12 border-x border-black/5;
+  }
+
+  .text-monumental {
+    font-family: var(--font-playfair), serif;
+    @apply text-[10vw] leading-[0.85] tracking-tighter uppercase;
+  }
+
+  .text-metadata {
+    @apply text-[9px] font-black uppercase tracking-[0.4em] text-[#4A4A4A];
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+  }
+}

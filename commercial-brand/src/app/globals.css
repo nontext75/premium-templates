@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+    --font-jakarta: var(--font-jakarta);
+    --font-inter: var(--font-inter);
+    /* Adding a Helvetica-like fallback system */
+    --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    --color-brand-primary: #000000;
+    --color-brand-secondary: #707070;
+    --color-brand-accent: #ED008C;
+    /* Electric Magenta */
+    /* Neutral Accent */
+    --color-bg-warm: #FFFFFF;
+}
+
+@layer base {
+    body {
+        background-color: #FFFFFF;
+        color: #1A1A1A;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+        letter-spacing: -0.02em;
+        /* Dense body text */
+    }
+
+    /* Standardizing headings for better readability */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+        /* Tight, impactful headings */
+    }
+}
+
+@layer utilities {
+    .warm-shadow {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03), 0 20px 60px rgba(0, 0, 0, 0.05);
+        /* Multi-layered shadow for Mass */
+    }
+
+    .subtle-layer {
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .editorial-heading {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.05em;
+        /* Extra tight for decorative headings */
+    }
+
+    .authentic-text {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        opacity: 0.7;
+    }
+
+    /* Dynamic Data Motion */
+    .stagger-in>* {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: staggerFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes staggerFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .liquid-hover {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .liquid-hover::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #ED008C;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .liquid-hover:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}

@@ -1,0 +1,71 @@
+/* Frame 1 */
+position: relative;
+width: 2032.8px;
+height: 10746px;
+
+/* Background */
+background: #FFFFFF;
+
+/* Vertical Dividers */
+/* left: 324px, 790.34px, 1256.66px, 1723px */
+/* background: #F3F6FC; */
+
+/* Hero Heading */
+font-family: 'Inter';
+font-weight: 600;
+font-size: 78px;
+line-height: 94px;
+letter-spacing: -3.9px;
+color: #FFFFFF;
+
+/* Schedule a call pill */
+border: 1px solid rgba(255, 255, 255, 0.75);
+border-radius: 100px;
+font-size: 11px;
+line-height: 20px;
+letter-spacing: 3px;
+text-transform: uppercase;
+
+/* Featured Section */
+/* Featured Label */
+font-family: 'Open Sans';
+font-size: 11px;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: #6E7488;
+transform: rotate(-90deg);
+
+/* Headings (We do it best, Behind the design, What's new) */
+font-size: 48px;
+line-height: 55px;
+letter-spacing: -1.44px;
+color: #090B19;
+
+/* Subheadings (Space Planning, Custom Furniture, etc) */
+font-size: 24px;
+line-height: 30px;
+letter-spacing: -0.72px;
+color: #090B19;
+
+/* Body Text */
+font-family: 'Open Sans';
+font-size: 16px;
+line-height: 26px;
+color: #6E7488;
+
+/* Footer Heading */
+font-size: 32px;
+line-height: 37px;
+color: #090B19;
+
+/* Footer Logo */
+font-size: 48px;
+line-height: 58px;
+letter-spacing: -1.44px;
+color: #FFFFFF;
+
+/* Header Logo */
+font-size: 22px;
+line-height: 20px;
+letter-spacing: -0.54px;
+color: #090B19;

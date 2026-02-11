@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+    --font-inter: var(--font-inter);
+    --color-brand-primary: #000000;
+    --color-brand-secondary: #707070;
+}
+
+@layer base {
+    body {
+        @apply bg-[#FFFFFF] text-[#000000] antialiased selection:bg-black selection:text-white;
+        font-family: var(--font-inter), sans-serif;
+    }
+}
