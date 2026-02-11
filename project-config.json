@@ -1,0 +1,38 @@
+{
+  "project": {
+    "name": "premium-templates",
+    "owner": "antigravity",
+    "collaborator": "nontext75",
+    "status": "development"
+  },
+  "repositories": {
+    "primary": "github.com/nontext75/premium-templates"
+  },
+  "connection": {
+    "method": "direct",
+    "status": "active",
+    "last_updated": "2026-02-11"
+  },
+  "templates": [
+    {
+      "name": "commercial-brand",
+      "port": 3000,
+      "purpose": "design-portfolio"
+    },
+    {
+      "name": "furniture-shop",
+      "port": 3001,
+      "purpose": "furniture-ecommerce"
+    },
+    {
+      "name": "nside-template",
+      "port": 3002,
+      "purpose": "full-service-agency"
+    },
+    {
+      "name": "modern-agency",
+      "port": 3003,
+      "purpose": "minimal-agency"
+    }
+  ]
+}
