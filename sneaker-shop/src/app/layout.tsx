@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "SNEAKER LAB | Premium Kicks",
-  description: "运动화 전용 프리미엄 쇼핑몰 - 트렌디한 키icks와 함께",
+  description: "Premium sneaker shopping - Upgrade your style with trendy kicks",
 };
 
 export default function RootLayout({
@@ -14,11 +12,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="en">
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

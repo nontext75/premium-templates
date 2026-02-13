@@ -29,14 +29,14 @@ export function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
         }`}
     >
-      <div className="max-w-[1400px] mx-auto px-8 md:px-12 h-24 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-8 md:px-12 h-24 flex items-center justify-between relative">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 z-10">
           <span className="text-2xl font-black tracking-tighter">SL.</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -49,7 +49,7 @@ export function Header() {
         </nav>
 
         {/* Icons */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 z-10">
           <button className="p-2 hover:text-[#ff3b30] transition-colors">
             <Search size={20} strokeWidth={1.5} />
           </button>

@@ -7,13 +7,13 @@ export function Footer() {
   return (
     <footer className="bg-black text-white pt-20 pb-10">
       <div className="max-w-[1400px] mx-auto px-8 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-center md:text-left">
           {/* Brand */}
-          <div className="space-y-6">
-            <h3 className="text-3xl font-black tracking-tighter">SL.</h3>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              프리미엄 운동화 쇼핑의 새로운 기준.
-              트렌디한 키크스를 만나보세요.
+          <div className="space-y-6 md:text-left">
+            <h3 className="text-3xl font-black tracking-tighter mx-auto md:mx-0">SL.</h3>
+            <p className="text-sm text-gray-400 leading-relaxed max-w-xs mx-auto md:mx-0">
+              The new standard for premium sneaker shopping.
+              Discover trendy kicks that define your style.
             </p>
           </div>
 
@@ -44,7 +44,7 @@ export function Footer() {
           </div>
 
           {/* Social */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col items-center md:items-start">
             <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-gray-500">
               Follow Us
             </h4>
