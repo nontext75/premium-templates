@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SNEAKER LAB | Premium Kicks",
-  description: "Premium sneaker shopping - Upgrade your style with trendy kicks",
+  title: "GP. | Gundam Plamodel Portfolio",
+  description: "Custom Gundam plamodel portfolio - Build, Customize, Create",
 };
 
 export default function RootLayout({
