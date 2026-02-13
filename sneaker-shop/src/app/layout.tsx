@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GP. | Gundam Plamodel Portfolio",
-  description: "Custom Gundam plamodel portfolio - Build, Customize, Create",
+  title: "GP. | Studio",
+  description: "Bespoke Gundam Plamodel Artistry",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="antialiased bg-[#eaeaea] text-[#1a1a1a]">
         {children}
       </body>
     </html>
