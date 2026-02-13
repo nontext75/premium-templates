@@ -53,9 +53,13 @@ npm run dev
 
 ## AI Agent Collaboration Guidelines
 
-### 레이 (OpenCode Agent)
+### Rei (레이) - OpenCode Agent
 - 역할: 프로젝트 관리, 코드 작성, 수정
 - 작업: 파일 생성, 편집, 서버 관리
+
+### Genie (지니)
+- 역할: 팀원, 협업 지원
+- 작업: 프로젝트 보조, 분석 지원
 
 ### GPT/Claude
 - 역할: 코드 리뷰, 최적화, 버그 수정

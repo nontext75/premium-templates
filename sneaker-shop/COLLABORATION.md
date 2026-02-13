@@ -2,7 +2,8 @@
 
 ## Overview
 This project supports collaboration between multiple AI agents:
-- **Rei (OpenCode)**: Primary project management
+- **Rei (레이)**: Primary project management
+- **Genie (지니)**: Team collaboration support
 - **GPT/Claude**: Code review and development
 - **Gemini**: Analysis and optimization
 
