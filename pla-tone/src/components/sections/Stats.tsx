@@ -11,7 +11,7 @@ const stats = [
 
 export function Stats() {
     return (
-        <section className="py-24 px-6 md:px-12 bg-[#f5f5f0] border-b border-[#0a0a12]/10">
+        <section className="py-24 px-6 md:px-12 bg-white border-b border-[#0a0a12]/10">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
                 <div className="max-w-lg">
                     <motion.h3

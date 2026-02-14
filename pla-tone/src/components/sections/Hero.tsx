@@ -14,7 +14,7 @@ export function Hero() {
     const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
     return (
-        <section ref={containerRef} className="h-screen relative overflow-hidden flex flex-col justify-between pt-32 pb-12 px-6 md:px-12 bg-[#f5f5f0]">
+        <section ref={containerRef} className="h-screen relative overflow-hidden flex flex-col justify-between pt-32 pb-12 px-6 md:px-12 bg-white">
             {/* Background Image Parallax */}
             <motion.div
                 style={{ y, opacity }}
@@ -27,7 +27,7 @@ export function Hero() {
                     className="w-full h-full bg-no-repeat bg-cover bg-center"
                     style={{ backgroundImage: 'url(/images/hero_temp.jpg)' }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#f5f5f0]" />
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white" />
             </motion.div>
 
             {/* Main Title */}

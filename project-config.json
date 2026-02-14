@@ -1,7 +1,7 @@
 {
   "project": {
     "name": "premium-templates",
-    "owner": "antigravity",
+    "owner": "nontext75",
     "collaborator": "nontext75",
     "status": "development"
   },
@@ -33,6 +33,11 @@
       "name": "modern-agency",
       "port": 3003,
       "purpose": "minimal-agency"
+    },
+    {
+      "name": "pla-tone",
+      "port": 3004,
+      "purpose": "gundam-plamodel"
     }
   ]
 }
