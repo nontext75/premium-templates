@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Public_Sans, Playfair_Display } from "next/font/google";
+import { Public_Sans, Space_Grotesk, Chakra_Petch } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/layout/Header";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
 const publicSans = Public_Sans({
@@ -8,9 +9,15 @@ const publicSans = Public_Sans({
     variable: "--font-public",
 });
 
-const playfair = Playfair_Display({
+const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],
-    variable: "--font-playfair",
+    variable: "--font-space",
+});
+
+const chakraPetch = Chakra_Petch({
+    weight: ['400', '700'],
+    subsets: ["latin"],
+    variable: "--font-chakra",
 });
 
 export const metadata: Metadata = {
@@ -24,9 +31,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className={`${publicSans.variable} ${playfair.variable}`}>
+        <html lang="en" className={`${publicSans.variable} ${spaceGrotesk.variable} ${chakraPetch.variable}`}>
             <body className="antialiased">
                 <SmoothScroll>
+                    <Header />
                     {children}
                 </SmoothScroll>
             </body>

@@ -19,7 +19,7 @@ export default function CollectionPage() {
                         className="space-y-6"
                     >
                         <span className="text-metadata">02 — INVENTORY</span>
-                        <h1 className="font-serif text-[10vw] leading-none uppercase">Collections.</h1>
+                        <h1 className="font-space font-black text-[10vw] leading-none uppercase">Collections.</h1>
                     </motion.div>
                 </div>
 
@@ -35,7 +35,7 @@ export default function CollectionPage() {
                             </div>
                             <div className="col-span-12 md:col-span-5 flex flex-col justify-center space-y-8">
                                 <span className="text-metadata">{item.category}</span>
-                                <h3 className="font-serif text-5xl uppercase leading-tight">{item.title}</h3>
+                                <h3 className="font-space font-bold text-5xl uppercase leading-tight">{item.title}</h3>
                                 <p className="text-brand-secondary leading-relaxed">
                                     A curated selection of pieces that embody our commitment to form, function, and the honesty of materials.
                                 </p>

@@ -10,7 +10,7 @@ export default function ContactPage() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="font-serif text-[12vw] leading-none uppercase tracking-tighter"
+                        className="font-space font-black text-[12vw] leading-none uppercase tracking-tighter"
                     >
                         WORK <br /> WITH US.
                     </motion.h1>
@@ -18,7 +18,7 @@ export default function ContactPage() {
                 <div className="col-span-12 md:col-span-4 space-y-12">
                     <div className="space-y-4">
                         <span className="text-metadata">INQUIRIES</span>
-                        <p className="text-2xl font-serif">studio@luminous.com</p>
+                        <p className="text-2xl font-space font-bold">studio@platone.com</p>
                     </div>
                     <div className="space-y-4">
                         <span className="text-metadata">STUDIO</span>

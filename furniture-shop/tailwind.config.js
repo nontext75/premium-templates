@@ -9,14 +9,15 @@ module.exports = {
         extend: {
             colors: {
                 brand: {
-                    primary: "#000000",
-                    secondary: "#4A4A4A",
-                    accent: "#8C7B6C",
+                    primary: "#0A0A0A", // Deep Black
+                    secondary: "#F5F5F0", // Off-white
+                    accent: "#FF3B30", // Gundam Red
                 },
             },
             fontFamily: {
                 sans: ["var(--font-public)"],
-                serif: ["var(--font-playfair)"],
+                space: ["var(--font-space)"],
+                chakra: ["var(--font-chakra)"],
             }
         },
     },
