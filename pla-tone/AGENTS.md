@@ -30,7 +30,7 @@
 
 ## Running the Project
 ```bash
-cd sneaker-shop
+cd pla-tone
 npm run dev
 # 포트: 3004
 ```

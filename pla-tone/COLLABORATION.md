@@ -12,15 +12,15 @@ This project supports collaboration between multiple AI agents:
 ### 1. Read Project Context
 ```bash
 # Read AGENTS.md first
-cat sneaker-shop/AGENTS.md
+cat pla-tone/AGENTS.md
 
 # Check current project structure
-ls -la sneaker-shop/
+ls -la pla-tone/
 ```
 
 ### 2. Start Development Server
 ```bash
-cd sneaker-shop
+cd pla-tone
 npm run dev
 # Server runs on http://localhost:3004
 ```
@@ -44,10 +44,10 @@ git diff
 - Test on localhost:3004
 
 ## File Locations
-- Main page: `sneaker-shop/src/app/page.tsx`
-- Components: `sneaker-shop/src/components/`
-- Styles: `sneaker-shop/src/app/globals.css`
-- Config: `sneaker-shop/package.json`
+- Main page: `pla-tone/src/app/page.tsx`
+- Components: `pla-tone/src/components/`
+- Styles: `pla-tone/src/app/globals.css`
+- Config: `pla-tone/package.json`
 
 ## Commands
 ```bash
