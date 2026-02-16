@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-    { label: 'Years Active', value: '04' },
-    { label: 'Models Built', value: '142' },
-    { label: 'Commissions', value: '89' },
-    { label: 'Awards', value: '12' },
+    { label: 'Years of Design', value: '12' },
+    { label: 'Collections', value: '24' },
+    { label: 'Awards Won', value: '08' },
+    { label: 'Showrooms', value: '04' },
 ];
 
 export default function Stats() {

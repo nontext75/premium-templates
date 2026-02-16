@@ -9,11 +9,11 @@ export default function Hero() {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/images/gundam-nu.jpg" // Local file for reliability
-                    alt="Gundam Studio Background"
-                    className="h-full w-full object-cover opacity-60 grayscale mix-blend-overlay"
+                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2000"
+                    alt="Luminous Furniture Studio"
+                    className="h-full w-full object-cover opacity-80"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
+                <div className="absolute inset-0 bg-black/30" />
             </div>
 
             {/* Content */}
@@ -32,31 +32,25 @@ export default function Hero() {
                                 transition={{ duration: 1, delay: 0.2 }}
                                 className="h-[1px] w-12 bg-brand-accent md:w-24"
                             />
-                            <span className="text-metadata text-brand-secondary/80">EST. 2024 / TOKYO</span>
+                            <span className="text-metadata text-white/90">EST. 2024 / COPENHAGEN</span>
                         </div>
 
-                        <h1 className="text-monumental text-white mix-blend-difference">
-                            PLA.TONE <br />
-                            STUDIO
+                        <h1 className="text-monumental text-white">
+                            LUMINOUS <br />
+                            ARCH.
                         </h1>
 
-                        <p className="max-w-md text-sm leading-relaxed text-brand-secondary/80 md:text-base font-sans">
-                            Redefining the art of mecha modeling. <br />
-                            Precision engineering meets luxury aesthetics.
+                        <p className="max-w-md text-sm leading-relaxed text-white/80 md:text-base font-sans">
+                            Curated furniture for the modern sanctuary. <br />
+                            Where form meets function in perfect silence.
                         </p>
 
                         <div className="pt-8">
                             <Link
                                 href="/collection"
-                                className="group relative inline-flex items-center gap-4 overflow-hidden border border-brand-secondary/20 bg-transparent px-8 py-4 text-[11px] font-black uppercase tracking-[0.3em] text-brand-secondary transition-all hover:bg-brand-secondary hover:text-brand-primary"
+                                className="group relative inline-flex items-center gap-4 overflow-hidden border border-white/40 bg-transparent px-8 py-4 text-[11px] font-black uppercase tracking-[0.3em] text-white transition-all hover:bg-white hover:text-black"
                             >
-                                <span className="relative z-10">Enter Residency</span>
-                                <motion.div
-                                    className="absolute inset-0 -z-0 bg-brand-secondary"
-                                    initial={{ x: "-100%" }}
-                                    whileHover={{ x: 0 }}
-                                    transition={{ duration: 0.3 }}
-                                />
+                                <span className="relative z-10">View Collection</span>
                             </Link>
                         </div>
                     </motion.div>
@@ -64,14 +58,14 @@ export default function Hero() {
 
                 {/* Bottom Metadata */}
                 <div className="absolute bottom-12 left-0 right-0 w-full px-6 md:px-12">
-                    <div className="grid grid-cols-12 w-full border-t border-brand-secondary/20 pt-6">
+                    <div className="grid grid-cols-12 w-full border-t border-white/20 pt-6">
                         <div className="col-span-6 md:col-span-3">
-                            <span className="text-metadata block text-brand-secondary/60">System Status</span>
-                            <span className="text-[10px] uppercase text-brand-accent">Operational</span>
+                            <span className="text-metadata block text-white/60">Materiality</span>
+                            <span className="text-[10px] uppercase text-white">Sustainable Oak</span>
                         </div>
                         <div className="col-span-6 md:col-span-3 text-right md:text-left">
-                            <span className="text-metadata block text-brand-secondary/60">Current Build</span>
-                            <span className="text-[10px] uppercase text-brand-secondary">RX-93 Nu Gundam</span>
+                            <span className="text-metadata block text-white/60">New Arrival</span>
+                            <span className="text-[10px] uppercase text-white">The Lounge Chair 01</span>
                         </div>
                     </div>
                 </div>

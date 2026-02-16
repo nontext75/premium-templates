@@ -1,16 +1,16 @@
 export const siteConfig = {
-    name: 'PLA.TONE STUDIO',
-    tagline: 'MECHANICAL AESTHETICS',
+    name: 'LUMINOUS.',
+    tagline: 'ARCHITECTURAL LIVING & SPACES',
     theme: {
-        primary: '#0A0A0A',
-        secondary: '#F5F5F0',
-        accent: '#FF3B30',
-        bg: '#0A0A0A'
+        primary: '#000000',
+        secondary: '#4A4A4A',
+        accent: '#8C7B6C', // Stone/Bronze
+        bg: '#FFFFFF'
     },
     navigation: [
-        { name: 'INVENTORY', href: '/collection' },
-        { name: 'PROJECTS', href: '/projects' },
-        { name: 'STUDIO', href: '/about' },
+        { name: 'SPACES', href: '/spaces' },
+        { name: 'COLLECTION', href: '/collection' },
+        { name: 'OUR PHILOSOPHY', href: '/about' },
         { name: 'CONTACT', href: '/contact' }
     ]
 };
