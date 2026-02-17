@@ -23,7 +23,7 @@ export function Header() {
     ];
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-50 px-[64px] py-[40px] flex justify-between items-center transition-colors duration-300 ${textColorClass}`}>
+        <header className={`fixed top-0 left-0 right-0 z-50 px-[64px] py-[40px] flex justify-between items-center transition-colors duration-300 mix-blend-difference text-white`}>
             {/* Logo */}
             <Link href="/" className="text-[22px] font-bold tracking-[-0.54px] uppercase leading-[20px]">
                 NONTEXT.

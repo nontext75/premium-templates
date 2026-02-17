@@ -18,7 +18,10 @@ export function Header() {
                     <Link href="/" className="font-serif text-3xl uppercase tracking-[0.2em]">
                         {siteConfig.name}
                     </Link>
-                    <div className="flex gap-8">
+                    <div className="flex gap-8 items-center">
+                        <Link href="/contact" className="text-[9px] font-black tracking-[0.5em] uppercase hover:opacity-50 transition-opacity">
+                            Contact
+                        </Link>
                         <span className="text-[9px] font-black tracking-[0.5em] uppercase cursor-pointer hover:opacity-50 transition-opacity">Login</span>
                         <span className="text-[9px] font-black tracking-[0.5em] uppercase cursor-pointer hover:opacity-50 transition-opacity">Cart (0)</span>
                     </div>

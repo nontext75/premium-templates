@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Public_Sans, Space_Grotesk, Chakra_Petch } from "next/font/google";
+import { Public_Sans, Space_Grotesk, Chakra_Petch, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { SmoothScroll } from "@/components/SmoothScroll";
@@ -20,6 +20,11 @@ const chakraPetch = Chakra_Petch({
     variable: "--font-chakra",
 });
 
+const playfair = Playfair_Display({
+    subsets: ["latin"],
+    variable: "--font-playfair",
+});
+
 export const metadata: Metadata = {
     title: "LUMINOUS. | Architectural Spaces",
     description: "Curated objects for contemporary living.",
@@ -31,7 +36,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className={`${publicSans.variable} ${spaceGrotesk.variable} ${chakraPetch.variable}`}>
+        <html lang="en" className={`${publicSans.variable} ${spaceGrotesk.variable} ${chakraPetch.variable} ${playfair.variable}`}>
             <body className="antialiased">
                 <SmoothScroll>
                     <Header />

@@ -1,45 +1,68 @@
 'use client';
 
 import Link from 'next/link';
+import { siteConfig } from '@/lib/site-config';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { CartDrawer } from './CartDrawer';
 
-export function Header() {
-    const navItems = [
-        { name: 'Home', href: '#' },
-        { name: 'Works', href: '#works' },
-        { name: 'Service', href: '#service' },
-        { name: 'Contact', href: '#contact' },
-    ];
+export default function Header() {
+    const [isCartOpen, setIsCartOpen] = useState(false);
 
     return (
-        <motion.header
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100"
-        >
-            <nav className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-                <Link href="/" className="text-xl font-black tracking-tight text-[#0a0a12] mix-blend-difference hover:text-[#ff3b30] transition-colors z-50">
-                    GP.
+        <header className="fixed top-0 left-0 right-0 z-50 px-6 py-6 md:px-12 text-white">
+            <div className="flex items-start justify-between border-b border-white/20 pb-6">
+                {/* Logo - Fixed Left */}
+                <Link href="/" className="group flex flex-col items-start gap-1">
+                    <div className="font-sans font-black text-2xl leading-none tracking-tighter uppercase text-brand-accent">
+                        PLA.TONE
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <span className="h-[1px] w-8 bg-[#7d5fff] transition-all group-hover:w-12"></span>
+                        <span className="font-sans font-bold text-[9px] tracking-[0.3em] opacity-40">STUDIO</span>
+                    </div>
                 </Link>
-                <div className="flex gap-8">
-                    {navItems.map((item, i) => (
-                        <motion.div
+
+                {/* Desktop Navigation - Right Aligned */}
+                <nav className="hidden md:flex items-center gap-12">
+                    {siteConfig.navigation.map((item, i) => (
+                        <Link
                             key={item.name}
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.1 }}
+                            href={item.href}
+                            className="relative text-[10px] font-bold tracking-[0.3em] font-sans uppercase hover:opacity-100 opacity-60 transition-opacity"
                         >
-                            <Link
-                                href={item.href}
-                                className="text-xs font-bold tracking-widest uppercase text-[#0a0a12] hover:text-[#ff3b30] transition-colors"
-                            >
-                                {item.name}
-                            </Link>
-                        </motion.div>
+                            <span className="mr-2 text-brand-accent opacity-0 hover:opacity-100 transition-opacity absolute -left-4">/</span>
+                            {item.name}
+                        </Link>
                     ))}
+
+                    <div className="h-4 w-[1px] bg-white/30 mx-4"></div>
+
+                    <div className="flex gap-6">
+                        <span
+                            onClick={() => setIsCartOpen(true)}
+                            className="text-[10px] font-bold tracking-[0.3em] font-sans uppercase cursor-pointer hover:text-[#7d5fff] transition-all"
+                        >
+                            CART(1)
+                        </span>
+                        <Link href="/login" className="text-[10px] font-bold tracking-[0.3em] font-sans uppercase hover:text-[#7d5fff] transition-all">
+                            LOGIN
+                        </Link>
+                    </div>
+                </nav>
+
+                {/* Mobile Menu Icon (Placeholder) */}
+                <div className="md:hidden flex gap-6 items-center">
+                    <span onClick={() => setIsCartOpen(true)} className="text-[10px] font-black uppercase tracking-widest text-white/60">Cart</span>
+                    <div className="space-y-1.5 cursor-pointer">
+                        <span className="block w-8 h-[2px] bg-white"></span>
+                        <span className="block w-8 h-[2px] bg-white"></span>
+                    </div>
                 </div>
-            </nav>
-        </motion.header>
+            </div>
+
+            <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+        </header>
     );
 }
+

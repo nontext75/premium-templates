@@ -1,36 +1,44 @@
-export function Footer() {
-    return (
-        <footer className="py-24 px-6 md:px-12 bg-[#0a0a12] text-[#f5f5f0] border-t border-white/5">
-            <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-20">
-                    <div>
-                        <h2 className="text-6xl md:text-8xl font-black tracking-tighter text-white mb-6">
-                            GP.
-                        </h2>
-                        <p className="text-white/40 text-sm tracking-[0.2em] max-w-xs leading-relaxed">
-                            PREMIUM GUNDAM PLAMODEL CUSTOMIZATION STUDIO EST. 2020
-                        </p>
-                    </div>
+'use client';
 
-                    <div className="flex flex-col items-start md:items-end gap-2">
-                        <a href="mailto:contact@gp.studio" className="text-2xl md:text-3xl font-bold hover:text-[#ff3b30] transition-colors">
-                            contact@gp.studio
-                        </a>
-                        <p className="text-white/40 text-xs tracking-widest uppercase">
-                            Available for Commission Work
-                        </p>
-                    </div>
+import Link from 'next/link';
+
+export default function Footer() {
+    return (
+        <footer className="bg-brand-primary text-brand-secondary border-t border-brand-secondary/20 pt-32 pb-12">
+            <div className="architectural-grid gap-y-16">
+                <div className="col-span-12 lg:col-span-6 mb-16 lg:mb-0">
+                    <h2 className="font-sans font-black text-white text-[8vw] lg:text-[5vw] leading-[0.9] tracking-tighter mb-8">
+                        Pla.tone <br />
+                        Studio
+                    </h2>
+                    <p className="max-w-md text-sm text-brand-secondary/40">
+                        Bespoke Gunpla artistry. <br />
+                        Tokyo based modeling studio specializing in high-detail custom builds and dioramas.
+                    </p>
                 </div>
 
-                <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-white/20 text-[10px] tracking-[0.2em] uppercase">
-                        © 2026 GP. Studio. All Rights Reserved.
-                    </div>
-                    <div className="flex gap-8 text-white/40 text-[10px] tracking-[0.2em] uppercase font-bold">
-                        <a href="#" className="hover:text-white transition-colors">Instagram</a>
-                        <a href="#" className="hover:text-white transition-colors">Twitter</a>
-                        <a href="#" className="hover:text-white transition-colors">Youtube</a>
-                    </div>
+                <div className="col-span-6 lg:col-span-3 space-y-4">
+                    <span className="text-[10px] font-black text-[#7d5fff] block mb-6 tracking-[0.4em]">SITEMAP</span>
+                    <ul className="space-y-4 text-sm font-sans tracking-widest">
+                        <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+                        <li><Link href="/collection" className="hover:text-white transition-colors">Collection</Link></li>
+                        <li><Link href="/about" className="hover:text-white transition-colors">Studio</Link></li>
+                        <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                    </ul>
+                </div>
+
+                <div className="col-span-6 lg:col-span-3 space-y-4">
+                    <span className="text-[10px] font-black text-[#7d5fff] block mb-6 tracking-[0.4em]">SOCIAL</span>
+                    <ul className="space-y-4 text-sm font-sans tracking-widest">
+                        <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">YouTube</a></li>
+                    </ul>
+                </div>
+
+                <div className="col-span-12 mt-24 pt-8 border-t border-brand-secondary/10 flex flex-col md:flex-row justify-between items-center text-[10px] text-brand-secondary/40 uppercase tracking-widest">
+                    <span>© 2024 PLA.TONE STUDIO. All Rights Reserved.</span>
+                    <span className="mt-4 md:mt-0">Design by NONTET</span>
                 </div>
             </div>
         </footer>

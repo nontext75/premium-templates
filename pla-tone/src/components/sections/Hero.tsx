@@ -1,79 +1,81 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
-export function Hero() {
-    const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end start"]
-    });
-
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-    const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-
+export default function Hero() {
     return (
-        <section ref={containerRef} className="h-screen relative overflow-hidden flex flex-col justify-between pt-32 pb-12 px-6 md:px-12 bg-white">
-            {/* Background Image Parallax */}
-            <motion.div
-                style={{ y, opacity }}
-                className="absolute top-0 right-0 w-[80%] h-full bg-cover bg-center opacity-20 z-0 grayscale"
-                initial={{ scale: 1.2 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-            >
-                <div
-                    className="w-full h-full bg-no-repeat bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/hero_temp.jpg)' }}
+        <section className="relative h-screen w-full overflow-hidden bg-brand-primary text-brand-secondary">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/images/hero_temp.jpg" // Updated to existing file
+                    alt="Gundam Studio Background"
+                    className="h-full w-full object-cover opacity-60 grayscale mix-blend-overlay"
                 />
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white" />
-            </motion.div>
-
-            {/* Main Title */}
-            <div className="relative z-10 mt-auto mb-auto">
-                <motion.div
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                >
-                    <p className="text-sm md:text-base tracking-[0.4em] uppercase mb-4 text-[#ff3b30] font-bold">
-                        Gundam Plamodel Studio
-                    </p>
-                    <h1 className="text-[12vw] leading-[0.85] font-black tracking-tighter text-[#0a0a12] mix-blend-multiply">
-                        MASTER<br />
-                        PIECE
-                    </h1>
-                </motion.div>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
             </div>
 
-            {/* Bottom Info */}
-            <motion.div
-                className="relative z-10 flex flex-col md:flex-row justify-between items-end border-t border-[#0a0a12]/10 pt-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.8, duration: 1 }}
-            >
-                <div className="flex gap-12 text-xs font-bold tracking-widest uppercase text-[#0a0a12]/60">
-                    <div>
-                        <span className="block text-[#0a0a12] mb-1">Est.</span>
-                        2020
-                    </div>
-                    <div>
-                        <span className="block text-[#0a0a12] mb-1">Location</span>
-                        Seoul, KR
-                    </div>
-                    <div>
-                        <span className="block text-[#0a0a12] mb-1">Specialty</span>
-                        Custom Build
-                    </div>
+            {/* Content */}
+            <div className="architectural-grid relative z-10 h-full">
+                <div className="col-span-12 flex h-full flex-col justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        className="space-y-4 md:space-y-8"
+                    >
+                        <div className="flex items-center gap-4 overflow-hidden">
+                            <motion.span
+                                initial={{ x: -100 }}
+                                animate={{ x: 0 }}
+                                transition={{ duration: 1, delay: 0.2 }}
+                                className="h-[1px] w-12 bg-brand-accent md:w-24"
+                            />
+                            <span className="text-metadata text-brand-secondary/80">EST. 2024 / TOKYO</span>
+                        </div>
+
+                        <h1 className="text-monumental font-sans text-white mix-blend-difference tracking-tighter">
+                            PLA.TONE <br />
+                            STUDIO
+                        </h1>
+
+                        <p className="max-w-md text-sm leading-relaxed text-brand-secondary/80 md:text-base font-sans">
+                            Redefining the art of mecha modeling. <br />
+                            Precision engineering meets luxury aesthetics.
+                        </p>
+
+                        <div className="pt-8">
+                            <Link
+                                href="/collection"
+                                className="group relative inline-flex items-center gap-4 overflow-hidden border border-brand-secondary/20 bg-transparent px-8 py-4 text-[11px] font-black uppercase tracking-[0.3em] text-brand-secondary transition-all hover:bg-brand-secondary hover:text-brand-primary"
+                            >
+                                <span className="relative z-10">Enter Residency</span>
+                                <motion.div
+                                    className="absolute inset-0 -z-0 bg-brand-secondary"
+                                    initial={{ x: "-100%" }}
+                                    whileHover={{ x: 0 }}
+                                    transition={{ duration: 0.3 }}
+                                />
+                            </Link>
+                        </div>
+                    </motion.div>
                 </div>
 
-                <div className="hidden md:flex items-center gap-4">
-                    <span className="text-xs font-bold tracking-widest uppercase">Scroll to Explore</span>
-                    <div className="w-12 h-[1px] bg-[#0a0a12]" />
+                {/* Bottom Metadata */}
+                <div className="absolute bottom-12 left-0 right-0 w-full px-6 md:px-12">
+                    <div className="grid grid-cols-12 w-full border-t border-brand-secondary/20 pt-6">
+                        <div className="col-span-6 md:col-span-3">
+                            <span className="text-metadata block text-brand-secondary/60">System Status</span>
+                            <span className="text-[10px] uppercase text-brand-accent">Operational</span>
+                        </div>
+                        <div className="col-span-6 md:col-span-3 text-right md:text-left">
+                            <span className="text-metadata block text-brand-secondary/60">Current Build</span>
+                            <span className="text-[10px] uppercase text-brand-secondary">RX-93 Nu Gundam</span>
+                        </div>
+                    </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }
