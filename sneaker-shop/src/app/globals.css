@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-outfit);
+  --font-outfit: var(--font-outfit);
+
+  /* NONTEXT DESIGN TOKENS */
+  --color-brand-primary: #D2B48C;
+  --color-brand-secondary: #000000;
+  --color-brand-accent: #A67C52;
+  --color-brand-muted: #F8F4F0;
+  --color-brand-border: #E8E2D7;
+
+  /* SPACING TOKENS */
+  --spacing-container-max: 1440px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-muted);
+    color: var(--color-brand-secondary);
+    font-family: var(--font-outfit), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+
+  /* ARCHITECTURAL GRID SYSTEM */
+  .container-nontext {
+    @apply grid grid-cols-12 w-full max-w-[var(--spacing-container-max)] mx-auto px-6 md:px-12;
+  }
+
+  /* UNIFIED TYPOGRAPHY GUIDE */
+  .text-display {
+    @apply text-[10vw] font-black leading-[0.85] tracking-tighter;
+  }
+
+  .text-meta {
+    @apply text-[9px] font-black tracking-[0.4em] uppercase opacity-60;
+  }
+
+  .text-technical {
+    @apply font-mono text-[10px] tracking-widest uppercase;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
+}
