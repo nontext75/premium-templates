@@ -4,4 +4,6 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
-export default nextConfig;
+import { withPayload } from '@payloadcms/next/withPayload'
+
+export default withPayload(nextConfig)
