@@ -1,4 +1,5 @@
 'use client';
+import { ImageWithFallback } from '@/components/ui/ImageWithFallback';
 
 import { motion } from 'framer-motion';
 import { projects, designerInfo } from '@/lib/data';
@@ -24,7 +25,7 @@ export default function Home() {
             {/* Hero Section - Refined for clarity */}
             <section className="px-6 mb-32">
                 <div className="relative h-[80vh] w-full overflow-hidden rounded-[1px] warm-shadow">
-                    <img
+                    <ImageWithFallback
                         src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2000"
                         alt="Hero Workspace"
                         className="w-full h-full object-cover grayscale brightness-90 contrast-105"
@@ -90,7 +91,7 @@ export default function Home() {
                         >
                             <Link href={`/shop/${project.id}`}>
                                 <div className="relative aspect-[4/5] overflow-hidden bg-white mb-10 warm-shadow rounded-[1px]">
-                                    <img
+                                    <ImageWithFallback
                                         src={project.thumbnail}
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                         alt={project.title}

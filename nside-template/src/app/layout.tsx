@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "NONTEXT | Interior Design That Matters",
+    title: "Design Company | NONTEXT",
     description: "Premium interior design for corporate spaces.",
 };
 

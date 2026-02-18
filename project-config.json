@@ -1,3 +1,4 @@
+```json
 {
   "project": {
     "name": "premium-templates",
@@ -11,12 +12,13 @@
   "connection": {
     "method": "direct",
     "status": "active",
-    "last_updated": "2026-02-11"
+    "last_updated": "2026-02-18"
   },
   "templates": [
     {
-      "name": "commercial-brand",
-      "port": 3000,
+      "name": "Design Portfolio",
+      "path": "commercial-brand",
+      "port": 3004,
       "purpose": "design-portfolio"
     },
     {
@@ -25,7 +27,8 @@
       "purpose": "furniture-ecommerce"
     },
     {
-      "name": "nside-template",
+      "name": "Design Company",
+      "path": "nside-template",
       "port": 3002,
       "purpose": "full-service-agency"
     },
@@ -38,6 +41,12 @@
       "name": "pla-tone",
       "port": 3004,
       "purpose": "gundam-plamodel"
+    },
+    {
+      "name": "sneaker-shop",
+      "port": 3000,
+      "purpose": "sneaker-ecommerce"
     }
   ]
 }
+```

@@ -4,8 +4,11 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { designerInfo } from '@/lib/data';
+import { useCart } from '@/context/CartContext';
+import { CartDrawer } from './CartDrawer';
 
 export function Header() {
+    const { toggleCart, itemCount } = useCart();
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -41,11 +44,15 @@ export function Header() {
                         Inquiry
                     </Link>
                     <div className="h-4 w-px bg-black/10" />
-                    <button className="text-[17px] font-black tracking-tighter hover:text-[#ED008C] transition-all outline-none">
-                        KR / EN
+                    <button
+                        onClick={toggleCart}
+                        className="text-[17px] font-black tracking-tighter hover:text-[#ED008C] transition-all outline-none flex items-center gap-2"
+                    >
+                        Cart ({itemCount})
                     </button>
                 </div>
             </nav>
+            <CartDrawer />
         </header>
     );
 }
