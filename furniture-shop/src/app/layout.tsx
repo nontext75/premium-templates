@@ -3,6 +3,7 @@ import { Public_Sans, Space_Grotesk, Chakra_Petch, Playfair_Display } from "next
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { Footer } from "@/components/layout/Footer";
 
 const publicSans = Public_Sans({
     subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
                 <SmoothScroll>
                     <Header />
                     {children}
+                    <Footer />
                 </SmoothScroll>
             </body>
         </html>

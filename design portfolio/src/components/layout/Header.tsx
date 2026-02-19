@@ -36,7 +36,7 @@ export function Header() {
                     >
                         <span className="text-white font-black text-2xl select-none">R</span>
                     </motion.div>
-                    <span className="text-2xl font-black tracking-tighter select-none group-hover:text-[#ED008C] transition-colors">Ray.</span>
+                    <span className="text-2xl font-black tracking-tighter select-none group-hover:text-[#ED008C] transition-colors">REI.</span>
                 </Link>
 
                 <div className="flex gap-8 items-center">

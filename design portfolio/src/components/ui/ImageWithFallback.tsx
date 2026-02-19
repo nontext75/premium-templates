@@ -21,7 +21,8 @@ export function ImageWithFallback({
             {...props}
             src={hasError ? fallbackSrc : (imgSrc as string)}
             alt={alt}
-            onError={() => {
+            onError={(e) => {
+                if (hasError) return; // Prevent infinite loop if fallback also fails
                 setHasError(true);
                 setImgSrc(fallbackSrc);
             }}

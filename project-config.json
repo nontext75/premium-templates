@@ -1,4 +1,3 @@
-```json
 {
   "project": {
     "name": "premium-templates",
@@ -16,37 +15,28 @@
   },
   "templates": [
     {
-      "name": "Design Portfolio",
-      "path": "commercial-brand",
+      "name": "design-portfolio",
+      "path": "design portfolio",
       "port": 3004,
       "purpose": "design-portfolio"
     },
     {
       "name": "furniture-shop",
+      "path": "furniture-shop",
       "port": 3001,
       "purpose": "furniture-ecommerce"
     },
     {
-      "name": "Design Company",
-      "path": "nside-template",
-      "port": 3002,
+      "name": "design-studio",
+      "path": "design studio",
+      "port": 3003,
       "purpose": "full-service-agency"
     },
     {
-      "name": "modern-agency",
-      "port": 3003,
-      "purpose": "minimal-agency"
-    },
-    {
-      "name": "pla-tone",
-      "port": 3004,
-      "purpose": "gundam-plamodel"
-    },
-    {
       "name": "sneaker-shop",
-      "port": 3000,
+      "path": "sneaker-shop",
+      "port": 3002,
       "purpose": "sneaker-ecommerce"
     }
   ]
 }
-```

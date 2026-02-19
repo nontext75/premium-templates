@@ -98,15 +98,15 @@ export const journalEntries: JournalEntry[] = [
 ];
 
 export const designerInfo = {
-    name: 'Ray',
+    name: 'REI',
     role: 'UI/UX Designer',
     tagline: 'Design beyond the ordinary',
     location: 'Seoul, KR',
     philosophy: 'We are not just designers; we are architects of experience.',
     contact: {
-        email: 'master@ray.design',
-        instagram: '@ray_ux',
-        linkedin: 'ray-designer'
+        email: 'master@nontext.com',
+        instagram: '@rei_ux',
+        linkedin: 'rei-designer'
     },
     nav: [
         { name: 'Works', href: '/shop' },
