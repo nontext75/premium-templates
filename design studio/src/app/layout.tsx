@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { CustomCursor } from "@/components/CustomCursor";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
                     <Header />
                     <CustomCursor />
                     {children}
+                    <Footer />
                 </SmoothScroll>
             </body>
         </html>
